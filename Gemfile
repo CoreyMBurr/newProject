@@ -8,4 +8,4 @@ gem 'sinatra-activerecord'
 gem 'rake'
 gem "bcrypt-ruby"
 gem 'sqlite3'
-gem 'global_phone'
+gem 'rack-flash3', :git => "git://github.com/treeder/rack-flash.git"

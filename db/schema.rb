@@ -10,12 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140220021654) do
+ActiveRecord::Schema.define(version: 20140303212948) do
+
+  create_table "addresses", force: true do |t|
+    t.string  "address1"
+    t.string  "address2"
+    t.string  "zip"
+    t.string  "city"
+    t.string  "state"
+    t.integer "userid"
+  end
 
   create_table "universities", force: true do |t|
-    t.string  "uname"
-    t.string  "ulocation"
-    t.integer "userid"
+    t.string  "name"
+    t.string  "state"
+    t.integer "user_id"
+  end
+
+  create_table "user_addresses", force: true do |t|
+    t.integer "user_id"
+    t.integer "address_id"
   end
 
   create_table "users", force: true do |t|
